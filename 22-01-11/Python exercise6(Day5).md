@@ -29,3 +29,30 @@ for i in range(len(students)):
         total += students[i][score]
     print(students[i]['name'],total,total/len(title))
 ```
+2. 딕셔너리를 이용하여 사용자로부터 영어단어와 뜻을 입력받아 사전을 구성하고, 사용자가 입력한 단어를 검색하여 뜻을 출력하는 프로그램을 작성하시오.
+voca = {}
+while True:
+    str_a = input('영어 단어 등록 (종료는 quit): ')
+    if str_a == 'quit':
+        break
+        
+    elif str_a in voca:
+        print(f'{str_a}는 이미 등록된 단어 입니다.')
+        
+    else:
+        str_b = input(f'{str_a}의 뜻입력 (종료는 quit):')
+        if str_b != 'quit':
+            voca[str_a] = str_b
+
+
+while True:
+    str_s_a = input('검색할 단어 등록 (종료는 quit): ')
+    if str_s_a == 'quit':
+        print('종료합니다')
+        break
+        
+    elif str_s_a not in voca:
+        print(f'{str_s_a}는 사전에 없는 단어 입니다.')
+        
+    else:
+        print(f'{str_s_a}의 뜻은 {voca[str_s_a]}입니다.')
