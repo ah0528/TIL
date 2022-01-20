@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <script>
+        // 선언적 함수
+        function hello() {
+            var txt = prompt("당신의 이름은 무엇입니까?");
+
+            alert(txt+"님, 안녕하세요\n반갑습니다!");
+        }
+
+        // 익명 함수
+        var feeling = function(){
+            var txt = prompt("오늘의 기분은 어떠셨나요? \n10점 만점으로 표현해주세요:)");
+
+            if (txt==0) {
+                alert("오늘은 기분이 안좋으셨군요:(\n 내일은 좋은 일이 있을 거에요 !");
+            } else if (1<=txt && txt<=3) {
+                alert("오늘도 수고하셨어요.\n가끔은 자신에게 선물을 주는 것은 어떨까요?");
+            } else if (4<=txt && txt<=6) {
+                alert("오늘은 평범한 하루였군요.\n당신의 오늘과 내일을 응원할게요.");
+            } else if (7<=txt && txt<=9){
+                alert("오늘은 기분이 좋으셨군요!:)\n당신의 행복이 주변 사람들에게도 힘이 됩니다.");
+            } else if (txt==10){
+                alert("오늘은 매우 행복한 하루였군요~!\n당신의 내일도 오늘과 같길 바랄게요:D")
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <pre><strong>함수 호출하기</strong>
+         함수명();
+         -> '함수명'만 작성하면 함수를 실행하는 것이 아니다.
+            함수이름 뒤에 ()를 써줘야 실핼하는 것이다.
+    </pre>
+    <div><strong>실행 우선순위</strong><br/>
+    선언적 함수와 익명 함수를 함께 사용할 때는 실행 순서가 다르다. <br/>
+    자바스크립트는 모든 코드를 읽기 전에 선언적 함수를 먼저 읽는다.<br/>
+    따라서 선언적 함수가 익명 함수 뒤에 위치해있더라도 나중에 읽은 익명 함수가 실행된다.
+    </div>
+
+    <p onclick="hello();">안녕</p>
+    <p onclick="feeling();">기분 체크</p>
+</body>
+</html>
