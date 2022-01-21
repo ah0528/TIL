@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+
+        function object01(){
+            this.name01 = "홍길동"; // this로 인해 objtect01의 객체가 된 name01
+            var name02 = "hong-gd";
+            this.getName02 = function(){
+                return name02;
+            }
+        }
+
+        // 객체 리터럴
+        var object02 = {
+            name: "kim-sd",  // name이 키, kim-sd이 값
+            prn: function(){  // prn이 키, 함수가 값
+                alert(object02.name + "의 전화번호 : 010-1111-1111");
+            }
+        }
+
+
+
+        function objTest(){
+            // 객체 생성
+            var obj01 = new object01(); // new로 했더니 object01이 객체로 만들어졌다.
+            //alert(obj01.name01); // this로 지정했기 때문에 외부에서 사용할 수 있음
+            //alert(obj01.name02); // 지역변수인 name02는 외부에서 사용할 수 없음(var로 지정했기 때문)
+            //alert(obj01.getName02());
+
+            //alert(object02.name);
+            //object02.prn();
+            obj01.prn();
+        }
+
+        object01.prototype.prn = function(){   // prototype은 객체에 기능을 추가하고 싶을 때 사용
+            alert(this.name01 + "의 전화번호는 010-2222-2222");
+        }
+
+    </script>
+</head>
+<body>
+
+    <h1>object (객체)</h1>
+
+    <pre>
+        객체의 구성
+        - property : 속성
+        - function (method) : 기능
+        - this : 객체 내부의 메서드나 속성을 정의
+        - prototype : 객체의 확장
+    </pre>
+
+    <button onclick="objTest();">확인</button>
+    
+</body>
+</html>
