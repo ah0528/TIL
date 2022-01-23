@@ -50,9 +50,23 @@
         <br/><hr/>
         <p>Copyright &copy;WebClass.ME. All Rights Reserved.</p>
     </div>
+    <br/><br/><br/><br/><br/><br/>
+    <div>
+        <p><b>교양 교재 예제2</b></p>
+        <h1>WebClass.ME</h1><hr/>
+        <h2>도서 대출 예약</h2><br/>
+        <form>
+            이름 : <input type="text" name="name"/><br/>
+            핸드폰 : <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" placeholder="000-000*-0000"/><br/>
+            이메일 : <input type="email" name="email" required/><br/><br/>
 
+            도서명: <input type="search" name="book" value="검색할 도서명을 입력하세요"/><br/>
+            예약 희망일 : <input type="date" name="bookdate" min="2022-01-24"><br/>
+            수령 시간 : <input type="time" name="minTime" min="10:00" max="17:00"/>에서 <input type="time" name="time_max" min="10:00" max="17:00"/><br/><br/>
 
-
-
+            기타 요청 : <br/><textarea name="request" cols="40" rows="5">기타 요청이 있는 경우에 작성해주세요</textarea><br/>
+            <input type="submit" value="예약하기"/>
+        </form>
+    </div>
 </body>
 </html>
