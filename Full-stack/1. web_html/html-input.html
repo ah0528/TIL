@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력</title>
+</head>
+<body>
+    <div>
+        <p><b>교양 교재 예제1</b></p>
+        <h1>WebClass.Me</h1><hr/>
+        <form>
+            <fieldset>
+                <legend>로그인</legend>
+                아이디<input type="text" name="id" value="아이디를 입력해주세요"></form><br/>
+                비밀번호<input type="password" name="password" value="비밀번호를 입력해주세요"></form>
+            </fieldset>
+            <fieldset>
+                <legend>도서 검색</legend>
+                도서명<input type="search" name="book title" value="검색하실 책 이름을 입력해주세요"></form><br/>
+                검색 범위
+                <input type="radio" name="searcharea" value="keyword"/>키워드
+                <input type="radio" name="searcharea" value="booktext"/>본문내용
+                <br/>
+                자료 유형 <input type="checkbox" name="books" value="all" checked/>전체
+                <input type="checkbox" name="books" value="book"/>단행본
+                <input type="checkbox" name="books" value="paper"/>학술지
+                <input type="checkbox" name="books" value="notbook"/>비도서
+        </fieldset>
+        <fieldset>
+            <legend>오픈 리소스 검색</legend>
+            키워드<input type="text" name="openresource"><br/>
+            검색범위<select name="openresourceSearcharea">
+                <optgroup label="A">
+                    <option>RISS</option>
+                    <option>NDSL</option>
+                    <option>WordCat</option>
+                </optgroup>
+                <optgroup label="B">
+                    <option>네이버전문정보</option>
+                    <option>국회도서관</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <br/><br/><br/>
+        <input type="reset" value="지우기"/>
+        <input type="submit" value="전송하기"/>
+        </form>
+        <br/><hr/>
+        <p>Copyright &copy;WebClass.ME. All Rights Reserved.</p>
+    </div>
+
+
+
+
+</body>
+</html>
