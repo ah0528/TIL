@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        p {
+            color: blue;
+        }
+        #header{
+            width:800px;
+            margin:0 auto;
+            background: red;
+        }
+        #wrap{
+            width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #aside{
+            width: 200px;
+            float: left;
+            background: blue;
+        }
+        #content{
+            width: 600px;
+            float: left;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>제목 글자 태그</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>    
+    </div>
+    
+    <div id="header">
+        <h1>#header 태그</h1>
+    </div>
+
+    <div id="wrap">
+        <div id="aside">
+            <h1>#aside 태그</h1>
+        </div>
+        <div>
+            <h1 id="content">#content 태그</h1>
+        </div>
+    </div>
+</body>
+</html>
