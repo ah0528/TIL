@@ -13,27 +13,26 @@
         function inputText(){
             var text = $("input:text").val();
             alert(text);
-        };
+        }
 
         function inputRadio(){
             var radioVal = $("input:radio").val();
             $("#a").text(radioVal);
-        };
+        }
 
         function inputCheck(){
             var chkVal = $("input:checkbox").val();
             $("#a").text(chkVal);
             // $("#a").append(chkVal); 버튼을 누를때마다 추가됨
-        };
+        }
 
         $(function(){
-            $("select").change(function(){
-                var option = $("select > option:selected");
-                alert(option.val());
-                alert($("select > option").index(option));
-            });
+        $("select").change(function(){
+            var option = $("select > option:selected");
+            alert(option.val());
+            alert($("select option").index(option));
         });
-
+        });
     </script>
 
 </head>
