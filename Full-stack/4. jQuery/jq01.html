@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="resources/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#test-btn").click(function(){
+            alert("클릭했음!!")
+            });
+
+        });
+
+        function showImg(){
+                $("img").show();
+        };
+
+        function resizeImg(){
+                $("img").css({"width" : "100px", "hright" : "200px"});
+        };
+
+        function addImg(){
+            $("img").last().after("<img src='resources/imgs/img01.png' alt='img01'>");
+        };
+
+        function toggleImg(){
+            $("img").toggle();
+        };
+
+    </script>
+
+</head>
+<body>
+    
+    <h1>JQuery : javascript library</h1>
+
+    <button id="test-btn">click me</button>
+    <br/>
+    <button onclick="showImg();">이미지 보이기</button>
+    <button onclick="resizeImg();">이미지 축소</button>
+    <button onclick="addImg();">이미지 추가</button>
+    <button onclick="toggleImg();">이미지 숨기기/보이기</button>
+    <br/>
+    <br/>
+    <div>
+        <img src="resources/imgs/img01.png" alt="img01">
+    </div>
+
+</body>
+</html>
