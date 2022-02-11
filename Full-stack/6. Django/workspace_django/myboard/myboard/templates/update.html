@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Update</h1>
+    <form action="/updateres/" method="post">{% csrf_token %}
+        <input type="hidden" name="id" value="{{ dto.id }}"/>
+        <table border="1">
+            <tr>
+                <th>ユーザー</th>
+                <td><input type="text" name="myname" value="{{ dto.myname }}" readonly/></td>
+            </tr>
+            <tr>
+                <th>タイトル	</th>
+                <td><input type="text" name="mytitle" value="{{ dto.mytitle }}" /></td>
+            </tr>
+            <tr>
+                <th>内容</th>
+                <td><textarea rows="10" cols="60" name="mycontent">{{ dto.mycontent }}</textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <input type="submit" value="修正"/>
+                    <input type="button" value="戻る" onclick="location.href='/detail/{{ dto.id }}'"/>
+                </td>
+            </tr>
+        </table>
+
+
+    </form>
+
+</body>
+</html>
